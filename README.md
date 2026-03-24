@@ -21,6 +21,14 @@ Due to dataset usage restrictions, the original dataset is not included in this 
 
 ---
 
+## Dataset Notes
+**Important:** The dataset provided in this repository is **randomly generated for testing purposes**. It is **not the actual dataset used**.  
+
+- The synthetic dataset allows demonstration of scripts, visualizations, and model pipelines.
+- Results reported here reflect the findings from the original internal dataset (not included for privacy).
+
+---
+
 ## Exploratory Data Analysis (EDA)
 
 ### Key Insights
@@ -90,7 +98,7 @@ Three models were trained and evaluated:
 
 ---
 
-## 🔑 Feature Importance
+## Feature Importance
 
 Top contributing features:
 - PageValue (most significant predictor)
@@ -100,7 +108,20 @@ Top contributing features:
 
 ---
 
-## 🚀 How to Run
+## Future Improvements (WIP)
 
-```bash
-sh run.sh
+The current project demonstrates a complete EDA and ML pipeline for predicting purchase completion. Possible enhancements for future work include:
+
+- **API Integration**: Deploy the trained model behind a REST API, enabling real-time prediction on new sessions.
+- **Feature Engineering**:
+  - Binning skewed numerical variables (e.g., PageValue, ProductPageTime) to reduce variance and improve F1-score.
+- **Hyperparameter Tuning**: Use automated hyperparameter search (e.g., GridSearchCV, Optuna) to optimize model performance.
+- **Imbalanced Data Handling**: Explore oversampling, undersampling, or synthetic data generation (SMOTE) to improve minority class prediction.
+- **Model Explainability**: Incorporate SHAP or LIME to better explain model predictions to stakeholders.
+
+---
+
+## How to Run
+1. Clone the repo
+2. Download requirements.txt
+3. run run.sh
